@@ -1,8 +1,8 @@
 ---
 applications:
-- name: gs-rest-service
+- name: bankstatement_processor_service
   memory: 256M
   instances: 1
-  host: rest-service
+  host: bankstatement_processor_service
   domain: guides.spring.io
-  path: build/libs/gs-rest-service-0.1.0.jar
+  path: build/libs/bankstatement_processor_service_0.1.0.jar

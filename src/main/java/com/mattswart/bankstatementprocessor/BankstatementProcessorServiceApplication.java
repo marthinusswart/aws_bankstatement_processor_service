@@ -7,8 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BankstatementProcessorServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BankstatementProcessorServiceApplication.class, args);
-		//test
+		SpringApplication.run(BankstatementProcessorServiceApplication.class, args);		
 	}
 
 }

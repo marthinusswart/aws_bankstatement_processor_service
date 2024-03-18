@@ -12,10 +12,10 @@
         },       
         {
             "type": "java",
-            "name": "RestServiceApplication",
+            "name": "BankstatementProcessorApp",
             "request": "launch",
-            "mainClass": "com.mattswart.springboot.RestServiceApplication",
-            "projectName": "rest-service-complete"
+            "mainClass": "com.mattswart.bankstatementprocessor.BankstatementProcessorServiceApplication",
+            "projectName": "bankstatement_processor_service"
         }
     ]
 }
