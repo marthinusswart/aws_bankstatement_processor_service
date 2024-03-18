@@ -8,6 +8,7 @@ public class BankstatementProcessorServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BankstatementProcessorServiceApplication.class, args);
+		//test
 	}
 
 }
