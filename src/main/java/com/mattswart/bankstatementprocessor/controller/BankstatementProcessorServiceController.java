@@ -35,7 +35,7 @@ public class BankstatementProcessorServiceController {
         String response = "{}";
 
         try{
-            response = bankstatementProcessorService.refreshServerUpdateTime();
+            response = bankstatementProcessorService.refreshServerUpdateTime(runningInstanceId);
         } catch (Exception ex){            
             System.out.println(ex.toString());
             return "{'exception':'"+ex.toString()+"'}";

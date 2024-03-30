@@ -15,7 +15,10 @@
             "name": "BankstatementProcessorApp",
             "request": "launch",
             "mainClass": "com.mattswart.bankstatementprocessor.BankstatementProcessorServiceApplication",
-            "projectName": "bankstatement_processor_service"
+            "projectName": "bankstatement_processor_service",
+            "env": {
+                "SERVER_INSTANCE_ID": "i-048229bc0da1203e7"             
+            }
         }
     ]
 }
