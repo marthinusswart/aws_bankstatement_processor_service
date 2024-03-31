@@ -17,7 +17,9 @@
             "mainClass": "com.mattswart.bankstatementprocessor.BankstatementProcessorServiceApplication",
             "projectName": "bankstatement_processor_service",
             "env": {
-                "SERVER_INSTANCE_ID": "i-048229bc0da1203e7"             
+                "SERVER_INSTANCE_ID": "i-048229bc0da1203e7",
+                "BANK_STATEMENT_DIRECTORY": "/home/matt/in",
+                "BANK_STATEMENT_ARCHIVE_DIRECTORY":"/home/matt/archive"
             }
         }
     ]

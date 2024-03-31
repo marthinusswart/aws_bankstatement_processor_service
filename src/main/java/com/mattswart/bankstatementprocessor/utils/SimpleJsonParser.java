@@ -1,4 +1,4 @@
-package com.mattswart.bankstatementprocessor.util;
+package com.mattswart.bankstatementprocessor.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

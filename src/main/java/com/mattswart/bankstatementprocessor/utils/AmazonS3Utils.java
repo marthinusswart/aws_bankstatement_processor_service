@@ -1,4 +1,4 @@
-package com.mattswart.bankstatementprocessor.util;
+package com.mattswart.bankstatementprocessor.utils;
 
 import org.springframework.stereotype.Component;
 

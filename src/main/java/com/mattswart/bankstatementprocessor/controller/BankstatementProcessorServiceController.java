@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mattswart.bankstatementprocessor.dto.BSPServiceStatus;
+import com.mattswart.bankstatementprocessor.service.BankstatementProcessorMessagePublisher;
 import com.mattswart.bankstatementprocessor.service.BankstatementProcessorService;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,10 +18,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/bankstatement_processor_service")
+@RequestMapping("/bankstatement_processor_service/v1")
 public class BankstatementProcessorServiceController {
     @Value("${SERVER_INSTANCE_ID}")
     private String runningInstanceId;
+
+    @Value("${BANK_STATEMENT_DIRECTORY}")
+    private String bankstatementDirectory;
+
+    @Value("${BANK_STATEMENT_ARCHIVE_DIRECTORY}")
+    private String bankstatementArchiveDirectory;
 
     @Autowired
 	private BankstatementProcessorService bankstatementProcessorService;
@@ -43,6 +50,23 @@ public class BankstatementProcessorServiceController {
 
         return response;
     }
+
+    @PostMapping("/process_bankstatement_directory")
+    public String processBankstatementDirectory() {
+        String response = "{'StatementDirectory':'" + bankstatementDirectory + "'}";
+
+        try{
+            response = bankstatementProcessorService.refreshServerUpdateTime(runningInstanceId);
+            response = bankstatementProcessorService.processBankstatementDirectory(bankstatementDirectory, bankstatementArchiveDirectory);
+        } catch (Exception ex){            
+            System.out.println(ex.toString());
+            return "{'exception':'"+ex.toString()+"'}";
+        }
+
+        return response;
+    }
+              
+    
     
     
 }
